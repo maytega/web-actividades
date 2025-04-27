@@ -10,6 +10,19 @@
                     <li><%=actividad.name%> <%=actividad.money%></li>
                 <%})%>
             </ul>
+
+            <form method="POST" action="/activities/donacion">
+                <input placeholder="Your name: " type="text" name="username">
+                <input placeholder="Password: " type="text" name="password">
+                <select name="activityname">
+                    <%acts.forEach((activity) => {%>
+                        <option value=<%=activity.name%>><%=activity.name%>
+                        </option>
+                    <%})%>
+                </select>
+                <input placeholder="Cantidad: " type="number" name="money">
+                <button type="submit">Donate</button>
+            </form>
         </main>
     </body>
 
