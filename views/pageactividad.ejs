@@ -10,7 +10,7 @@
                     <li><%=actividad.name%> <%=actividad.money%></li>
                 <%})%>
             </ul>
-
+            <h2>Donacion</h2>
             <form method="POST" action="/activities/donacion">
                 <input placeholder="Your name: " type="text" name="username">
                 <input placeholder="Password: " type="text" name="password">
@@ -22,6 +22,12 @@
                 </select>
                 <input placeholder="Cantidad: " type="number" name="money">
                 <button type="submit">Donate</button>
+            </form>
+            <h3>Check user money</h3>
+            <form method="POST" action="/users/check">
+                <input placeholder="Your name: " type="text" name="username">
+                <input placeholder="Password: " type="text" name="password">               
+                <button type="submit">Check</button>
             </form>
         </main>
     </body>

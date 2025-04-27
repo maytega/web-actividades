@@ -11,6 +11,9 @@ app.use(bodyParser.urlencoded({extended:true}))
 let routeractivities = require("./routers/routeractivities")
 app.use("/activities", routeractivities)
 
+let routerusers = require("./routers/routerusers")
+app.use("/users", routerusers)
+
 app.listen(port, () => {
     console.log("Servidor activo en "+port)
 })
